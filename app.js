@@ -63,14 +63,11 @@ function createRandomCircle() {
 	circle.style.height = `${size}px`
 	circle.style.top = `${y}px`
 	circle.style.left = `${x}px`
+	circle.style.background = getRandomColor()
 
 	board.append(circle)
 }
-function setColor (circle) {
-	const color = getRandomColor()
-	circle.style.backgroundColor = color
-}
-function getRandomColor () {
+function getRandomColor() {
 	const index = Math.floor(Math.random() * colors.length)
 	return colors[index]
 }
